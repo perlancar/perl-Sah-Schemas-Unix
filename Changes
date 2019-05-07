@@ -1,3 +1,11 @@
+0.003   2019-05-07 (PERLANCAR)
+
+	- [ux] Add description to some of the schemas.
+
+	- Base unix::local_gid on unix::gid, not uint. Base unix::local_uid on
+          unix::uid, not uint.
+
+
 0.002   2019-05-07 (PERLANCAR)
 
         - [bugfix] [build] Rebuild to fix dependencies to non-existing coercion
