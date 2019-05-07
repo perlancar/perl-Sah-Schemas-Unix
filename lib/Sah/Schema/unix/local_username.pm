@@ -5,7 +5,7 @@ package Sah::Schema::unix::local_username;
 
 our $schema = ['unix::username' => {
     summary => 'Unix user name that must exist on the system',
-    'x.perl.coerce_rules' => ['str_check_unix_user_exists'],
+    'x.perl.coerce_rules' => ['int_convert_uid_to_unix_user', 'str_check_unix_user_exists'],
 }, {}];
 
 1;

@@ -8,7 +8,7 @@ our $schema = [uint => {
     description => <<'_',
 
 _
-    'x.perl.coerce_rules' => ['int_check_gid_exists'],
+    'x.perl.coerce_rules' => ['str_convert_unix_group_to_gid', 'int_check_gid_exists'],
 }, {}];
 
 1;
