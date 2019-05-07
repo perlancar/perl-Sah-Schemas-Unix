@@ -1,3 +1,9 @@
+0.002   2019-05-07 (PERLANCAR)
+
+        - [bugfix] [build] Rebuild to fix dependencies to non-existing coercion
+          rule modules.
+
+
 0.001   2019-05-07 (PERLANCAR)
 
         - First release.
