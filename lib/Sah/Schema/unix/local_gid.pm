@@ -3,7 +3,7 @@ package Sah::Schema::unix::local_gid;
 # DATE
 # VERSION
 
-our $schema = [uint => {
+our $schema = ["unix::gid" => {
     summary => 'Group identifier (GID) that has to exist (has associated group name) on the system',
     description => <<'_',
 
