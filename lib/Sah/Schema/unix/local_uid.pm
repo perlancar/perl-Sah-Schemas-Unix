@@ -3,7 +3,7 @@ package Sah::Schema::unix::local_uid;
 # DATE
 # VERSION
 
-our $schema = [uint => {
+our $schema = ["unix::uid" => {
     summary => 'User identifier (UID) that has to exist (has associated username) on the system',
     description => <<'_',
 
