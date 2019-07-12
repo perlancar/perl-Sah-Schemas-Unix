@@ -1,7 +1,7 @@
 0.004   2019-07-12  Released-By: PERLANCAR; Urgency: medium
 
         - UPDATE: This release is broken due to non-existing coerce rule
-          dependencies.
+          dependencies added by [Sah::Schemas].
 
 	- [ux] Add aliases for {file,dir,path}name::unix ->
 	  unix::{file,dir,path}name.
