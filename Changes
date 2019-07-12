@@ -1,3 +1,9 @@
+0.004   2019-07-12  Released-By: PERLANCAR; Urgency: medium
+
+	- [ux] Add aliases for {file,dir,path}name::unix ->
+	  unix::{file,dir,path}name.
+
+
 0.003   2019-05-07  Released-By: PERLANCAR
 
 	- [ux] Add description to some of the schemas.
