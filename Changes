@@ -1,3 +1,10 @@
+0.007   2019-11-28  Released-By: PERLANCAR; Urgency: medium
+
+        - [build] Rebuild with updated dzil plugin [Sah::Schemas] (0.016) which
+          now adds dependencies to the updated Data::Sah::Coerce::perl::To_*
+          coercion rule modules.
+
+
 0.006   2019-11-28  Released-By: PERLANCAR; Urgency: medium
 
 	- Rename coerce rule module to use new naming scheme
