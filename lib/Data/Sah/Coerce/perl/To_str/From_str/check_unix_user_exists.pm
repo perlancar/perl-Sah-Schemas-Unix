@@ -1,4 +1,4 @@
-package Data::Sah::Coerce::perl::To_int::From_int::CheckUIDExists;
+package Data::Sah::Coerce::perl::To_str::From_str::check_unix_user_exists;
 
 # AUTHOR
 # DATE
@@ -12,7 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
-        summary => 'Check that UID exists (has associated username) on the system',
+        summary => 'Check that Unix username exists on the system',
         prio => 50,
         might_fail => 1,
     };
@@ -28,7 +28,7 @@ sub coerce {
     $res->{expr_match} = "1";
     $res->{expr_coerce} = join(
         "",
-        "do { my \$tmp = $dt+0; my \@tmp = getpwuid(\$tmp); if (!\@tmp) { [\"UID \$tmp is not associated with any user\"] } else { [undef, \$tmp] } }",
+        "do { my \$tmp = $dt; my \@tmp = getpwnam(\$tmp); if (!\@tmp) { [\"User '\$tmp' does not exist\"] } else { [undef, \$tmp] } }",
     );
 
     $res;

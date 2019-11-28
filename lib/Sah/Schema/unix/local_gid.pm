@@ -15,7 +15,7 @@ returns a record.
 Support coercion from an existing group name.
 
 _
-    'x.perl.coerce_rules' => ['From_str::ConvertUnixGroupToGID', 'From_int::CheckGIDExists'],
+    'x.perl.coerce_rules' => ['From_str::convert_unix_group_to_gid', 'From_int::check_gid_exists'],
 }, {}];
 
 1;

@@ -1,4 +1,4 @@
-package Data::Sah::Coerce::perl::To_int::From_int::CheckGIDExists;
+package Data::Sah::Coerce::perl::To_int::From_int::check_uid_exists;
 
 # AUTHOR
 # DATE
@@ -28,7 +28,7 @@ sub coerce {
     $res->{expr_match} = "1";
     $res->{expr_coerce} = join(
         "",
-        "do { my \$tmp = $dt+0; my \@tmp = getgrgid(\$tmp); if (!\@tmp) { [\"GID \$tmp is not associated with any group\"] } else { [undef, \$tmp] } }",
+        "do { my \$tmp = $dt+0; my \@tmp = getpwuid(\$tmp); if (!\@tmp) { [\"UID \$tmp is not associated with any user\"] } else { [undef, \$tmp] } }",
     );
 
     $res;

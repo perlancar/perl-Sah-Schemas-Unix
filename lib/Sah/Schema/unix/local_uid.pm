@@ -15,7 +15,7 @@ returns a record.
 Support coercion from an existing user name.
 
 _
-    'x.perl.coerce_rules' => ['From_str::ConvertUnixUserToUID', 'From_int::CheckUIDExists'],
+    'x.perl.coerce_rules' => ['From_str::convert_unix_user_to_uid', 'From_int::check_uid_exists'],
 }, {}];
 
 1;

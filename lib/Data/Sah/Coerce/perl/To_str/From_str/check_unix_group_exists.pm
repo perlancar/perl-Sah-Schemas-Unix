@@ -1,4 +1,4 @@
-package Data::Sah::Coerce::perl::To_str::From_str::CheckUnixGroupExists;
+package Data::Sah::Coerce::perl::To_str::From_str::check_unix_group_exists;
 
 # AUTHOR
 # DATE

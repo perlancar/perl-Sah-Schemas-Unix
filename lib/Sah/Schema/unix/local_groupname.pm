@@ -12,7 +12,7 @@ our $schema = ['unix::groupname' => {
 Support coercion from GID.
 
 _
-    'x.perl.coerce_rules' => ['From_int::ConvertGIDToUnixGroup', 'From_str::CheckUnixGroupExists'],
+    'x.perl.coerce_rules' => ['From_int::convert_gid_to_unix_group', 'From_str::check_unix_group_exists'],
 }, {}];
 
 1;

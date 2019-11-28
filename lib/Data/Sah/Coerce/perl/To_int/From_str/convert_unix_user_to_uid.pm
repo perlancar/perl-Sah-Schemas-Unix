@@ -1,4 +1,4 @@
-package Data::Sah::Coerce::perl::To_int::From_str::ConvertUnixUserToUID;
+package Data::Sah::Coerce::perl::To_int::From_str::convert_unix_user_to_uid;
 
 # AUTHOR
 # DATE

@@ -1,4 +1,4 @@
-package Data::Sah::Coerce::perl::To_str::From_int::ConvertGIDToUnixGroup;
+package Data::Sah::Coerce::perl::To_str::From_int::convert_uid_to_unix_user;
 
 # AUTHOR
 # DATE
@@ -12,7 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
-        summary => 'Convert GID into Unix groupname',
+        summary => 'Convert UID into Unix username',
         prio => 40,
     };
 }
@@ -27,7 +27,7 @@ sub coerce {
     $res->{expr_match} = "$dt =~ /\\A[0-9]+\\z/";
     $res->{expr_coerce} = join(
         "",
-        "do { my \$tmp = $dt; my \@gr = getgrgid(\$tmp); \@gr ? \$gr[0] : \$tmp }",
+        "do { my \$tmp = $dt; my \@pw = getpwuid(\$tmp); \@pw ? \$pw[0] : \$tmp }",
     );
 
     $res;
