@@ -1,6 +1,8 @@
 package Sah::Schema::unix::local_gid;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 our $schema = ["unix::gid" => {
@@ -13,7 +15,7 @@ returns a record.
 Support coercion from an existing group name.
 
 _
-    'x.perl.coerce_rules' => ['str_convert_unix_group_to_gid', 'int_check_gid_exists'],
+    'x.perl.coerce_rules' => ['From_str::ConvertUnixGroupToGID', 'From_int::CheckGIDExists'],
 }, {}];
 
 1;
