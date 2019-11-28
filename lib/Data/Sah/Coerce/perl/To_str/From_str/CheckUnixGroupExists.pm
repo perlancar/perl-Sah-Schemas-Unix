@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::str::str_check_unix_group_exists;
+package Data::Sah::Coerce::perl::To_str::From_str::CheckUnixGroupExists;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Check that Unix group exists on the system',
         prio => 50,
         might_fail => 1,
     };
@@ -32,10 +35,6 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Check that Unix group exists on the system
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
-
-=head1 DESCRIPTION
-
-=cut

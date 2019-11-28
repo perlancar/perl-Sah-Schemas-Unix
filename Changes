@@ -1,3 +1,9 @@
+0.006   2019-11-28  Released-By: PERLANCAR; Urgency: medium
+
+	- Rename coerce rule module to use new naming scheme
+	  (Data::Sah::Coerce 0.034+).
+
+
 0.005   2019-09-11  Released-By: PERLANCAR; Urgency: medium
 
 	- Add schema: unix::signal.

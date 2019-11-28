@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::str::int_convert_gid_to_unix_group;
+package Data::Sah::Coerce::perl::To_str::From_int::ConvertGIDToUnixGroup;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Convert GID into Unix groupname',
         prio => 40,
     };
 }
@@ -31,10 +34,6 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Convert GID into Unix groupname
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
-
-=head1 DESCRIPTION
-
-=cut
