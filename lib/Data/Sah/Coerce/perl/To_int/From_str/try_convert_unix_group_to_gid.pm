@@ -1,4 +1,4 @@
-package Data::Sah::Coerce::perl::To_int::From_str::convert_unix_group_to_gid;
+package Data::Sah::Coerce::perl::To_int::From_str::try_convert_unix_group_to_gid;
 
 # AUTHOR
 # DATE
@@ -12,9 +12,8 @@ use warnings;
 sub meta {
     +{
         v => 4,
-        summary => 'Convert Unix groupname into GID, fail when cannot convert',
+        summary => 'Try to convert Unix groupname into GID, leave as-is when cannot convert',
         prio => 40,
-        might_fail => 1,
     };
 }
 
@@ -28,7 +27,7 @@ sub coerce {
     $res->{expr_match} = "$dt !~ /\\A[0-9]+\\z/";
     $res->{expr_coerce} = join(
         "",
-        "do { my \$tmp = $dt; my \@gr = getgrnam(\$tmp); return [\"Unknown Unix user '\$tmp'\"] unless \@gr ? [undef, \$gr[2]] }",
+        "do { my \$tmp = $dt; my \@gr = getgrnam(\$tmp); \@gr ? \$gr[2] : \$tmp }",
     );
 
     $res;
@@ -41,7 +40,7 @@ sub coerce {
 
 =head1 SEE ALSO
 
-L<Data::Sah::Coerce::perl::To_int::From_str::try_convert_unix_group_to_gid>
-which leave string as-is when there is no associated GID for the groupname.
+L<Data::Sah::Coerce::perl::To_int::From_str::convert_unix_group_to_gid> which
+dies when failing to convert. Most of the time you'd want this rule.
 
 L<Data::Sah::Coerce::perl::To_int::From_str::try_convert_unix_user_to_uid>
