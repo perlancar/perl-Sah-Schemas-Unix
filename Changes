@@ -1,3 +1,11 @@
+0.009   2019-12-09  Released-By: PERLANCAR; Urgency: medium
+
+	- [ux] For better error message, coercion rules that convert UID/GID <->
+	  username/groupname now die/fail when they cannot convert; the
+	  leave-as-is-when-cannot-convert variants are now moved to
+	  try_convert_*.
+
+
 0.008   2019-11-28  Released-By: PERLANCAR; Urgency: medium
 
 	- Rename coerce rule modules again, revert to using lower_case
