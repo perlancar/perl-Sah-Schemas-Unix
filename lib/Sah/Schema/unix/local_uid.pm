@@ -1,6 +1,6 @@
 package Sah::Schema::unix::local_uid;
 
-# AUTHOR
+# AUTHORITY
 # DATE
 # DIST
 # VERSION
@@ -15,7 +15,7 @@ returns a record.
 Support coercion from an existing user name.
 
 _
-    'x.perl.coerce_rules' => ['From_str::convert_unix_user_to_uid', 'From_int::check_uid_exists'],
+    'prefilters' => ['Unix::convert_unix_user_to_uid', 'Unix::check_uid_exists'],
 }, {}];
 
 1;

@@ -1,6 +1,8 @@
 package Sah::Schema::unix::groupname;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [str => {
