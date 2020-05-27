@@ -21,6 +21,12 @@ _
     min_len => 1,
     max_len => 32,
     match => qr/(?=\A[A-Za-z0-9._][A-Za-z0-9._-]{0,31}\z)(?=.*[A-Za-z._-])/,
+
+    examples => [
+        {value=>'', valid=>0},
+        {value=>'foo', valid=>1},
+    ],
+
 }, {}];
 
 1;

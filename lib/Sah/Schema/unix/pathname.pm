@@ -10,6 +10,9 @@ our $schema = ["pathname::unix" => {
 This is just a convenient alias for pathname::unix.
 
 _
+
+    examples => [],
+
 }, {}];
 
 1;
