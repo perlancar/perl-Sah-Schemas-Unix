@@ -25,6 +25,12 @@ _
     examples => [
         {value=>'', valid=>0},
         {value=>'foo', valid=>1},
+        {value=>'-andy', valid=>0},
+        {value=>'1234', valid=>0},
+        {value=>'andy2', valid=>1},
+        {value=>'an dy', valid=>0},
+        {value=>'an.dy', valid=>1},
+        {value=>'a' x 33, value=>0, summary=>'Too long'},
     ],
 
 }, {}];
