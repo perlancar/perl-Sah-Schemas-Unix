@@ -26,7 +26,7 @@ sub filter {
 
     $res->{expr_filter} = join(
         "",
-        "do { my \$tmp = $dt; if (\$tmp =~ /\\A[0-9]+\\z/) { my \@pw = getpwuid(\$tmp); return [\"UID \$tmp has no associated username\", \$tmp] unless \@pw; return [undef, \$pw[0]] } [undef, \$tmp] }",
+        "do { my \$tmp = $dt; if (\$tmp =~ /\\A[0-9]+\\z/) { my \@pw = getpwuid(\$tmp); \@pw ? [undef, \$pw[0]] : [\"UID \$tmp has no associated username\", \$tmp] } else { [undef, \$tmp] } }",
     );
 
     $res;

@@ -25,7 +25,7 @@ sub filter {
 
     $res->{expr_filter} = join(
         "",
-        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@pw = getpwnam(\$tmp); return \@pw ? \$pw[2] : \$tmp } \$tmp }",
+        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@pw = getpwnam(\$tmp); \@pw ? \$pw[2] : \$tmp } else { \$tmp } }",
     );
 
     $res;

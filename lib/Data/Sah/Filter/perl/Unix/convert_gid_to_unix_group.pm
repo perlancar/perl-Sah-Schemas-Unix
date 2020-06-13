@@ -26,7 +26,7 @@ sub filter {
 
     $res->{expr_filter} = join(
         "",
-        "do { my \$tmp = $dt; if (\$tmp =~ /\\A[0-9]+\\z/) { my \@gr = getgrgid(\$tmp); return [\"GID \$tmp has no associated group name\", \$tmp] unless \@gr; return [undef, \$gr[0]] } [undef, \$tmp] }",
+        "do { my \$tmp = $dt; if (\$tmp =~ /\\A[0-9]+\\z/) { my \@gr = getgrgid(\$tmp); \@gr ? [undef, \$gr[0]] : [\"GID \$tmp has no associated group name\", \$tmp] } else { [undef, \$tmp] } }",
     );
 
     $res;

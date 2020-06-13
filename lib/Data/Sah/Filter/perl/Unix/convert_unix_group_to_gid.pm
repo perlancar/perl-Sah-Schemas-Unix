@@ -26,7 +26,7 @@ sub filter {
 
     $res->{expr_filter} = join(
         "",
-        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@gr = getgrnam(\$tmp); return [\"Unknown Unix user '\$tmp'\", \$tmp] unless \@gr; return [undef, \$gr[2]] } [undef, \$tmp] }",
+        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@gr = getgrnam(\$tmp); \@gr ? [undef, \$gr[2]] : [\"Unknown Unix user '\$tmp'\", \$tmp] } else { [undef, \$tmp] } }",
     );
 
     $res;

@@ -27,7 +27,7 @@ sub filter {
     $res->{expr_match} = "$dt !~ ";
     $res->{expr_filter} = join(
         "",
-        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@pw = getpwnam(\$tmp); return [\"Unknown Unix group '\$tmp'\", \$tmp] unless \@pw; return [undef, \$pw[2]] } [undef, \$tmp] }",
+        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@pw = getpwnam(\$tmp); \@pw ? [undef, \$pw[2]] : [\"Unknown Unix group '\$tmp'\", \$tmp] } else { [undef, \$tmp] } }",
     );
 
     $res;

@@ -25,7 +25,7 @@ sub filter {
 
     $res->{expr_filter} = join(
         "",
-        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@gr = getgrnam(\$tmp); return \@gr ? \$gr[2] : \$tmp } \$tmp }",
+        "do { my \$tmp = $dt; if (\$tmp !~ /\\A[0-9]+\\z/) { my \@gr = getgrnam(\$tmp); \@gr ? \$gr[2] : \$tmp } else { \$tmp } }",
     );
 
     $res;
