@@ -1,3 +1,11 @@
+0.016   2021-07-20  Released-By: PERLANCAR; Urgency: low
+
+        - No functional changes.
+
+	- [build] Rebuild with fixed Pod::Weaver plugin [-Sah::Schemas]
+          (0.066) to correctly show non-defhash examples.
+
+
 0.015   2021-07-20  Released-By: PERLANCAR; Urgency: medium
 
 	- Re-add valid examples in unix::signal schema.
