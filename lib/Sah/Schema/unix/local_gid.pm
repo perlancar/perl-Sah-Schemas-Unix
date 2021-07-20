@@ -16,7 +16,7 @@ Support coercion from an existing group name.
 
 _
     'prefilters' => ['Unix::convert_unix_group_to_gid', 'Unix::check_gid_exists'],
-}, {}];
+}];
 
 1;
 # ABSTRACT:

@@ -16,7 +16,7 @@ Support coercion from an existing user name.
 
 _
     'prefilters' => ['Unix::convert_unix_user_to_uid', 'Unix::check_uid_exists'],
-}, {}];
+}];
 
 1;
 # ABSTRACT:

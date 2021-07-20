@@ -1,3 +1,8 @@
+0.015   2021-07-20  Released-By: PERLANCAR; Urgency: medium
+
+	- Re-add valid examples in unix::signal schema.
+
+
 0.014   2021-07-19  Released-By: PERLANCAR; Urgency: low
 
         - No functional changes.

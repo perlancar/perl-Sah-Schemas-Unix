@@ -16,7 +16,7 @@ _
     examples => [
     ],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:

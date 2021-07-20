@@ -33,7 +33,7 @@ _
         {value=>'a' x 33, value=>0, summary=>'Too long'},
     ],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:

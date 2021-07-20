@@ -1,6 +1,8 @@
 package Sah::Schema::unix::pid;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [posint => {
@@ -15,7 +17,7 @@ _
         {value=>1, valid=>1},
     ],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:

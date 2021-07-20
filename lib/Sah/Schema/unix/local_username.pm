@@ -13,7 +13,7 @@ Support coercion from UID.
 
 _
     'prefilters' => ['Unix::convert_uid_to_unix_user', 'Unix::check_unix_user_exists'],
-}, {}];
+}];
 
 1;
 # ABSTRACT:

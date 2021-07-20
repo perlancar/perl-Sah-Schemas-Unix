@@ -1,6 +1,8 @@
 package Sah::Schema::unix::pathname;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = ["pathname::unix" => {
@@ -13,7 +15,7 @@ _
 
     examples => [],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:

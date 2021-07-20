@@ -13,7 +13,7 @@ Support coercion from GID.
 
 _
     'prefilters' => ['Unix::convert_gid_to_unix_group', 'Unix::check_unix_group_exists'],
-}, {}];
+}];
 
 1;
 # ABSTRACT:

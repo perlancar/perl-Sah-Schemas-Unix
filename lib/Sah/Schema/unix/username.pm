@@ -1,6 +1,8 @@
 package Sah::Schema::unix::username;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 our $schema = [str => {
@@ -31,7 +33,7 @@ _
         {value=>'a' x 33, value=>0, summary=>'Too long'},
     ],
 
-}, {}];
+}];
 
 1;
 # ABSTRACT:
