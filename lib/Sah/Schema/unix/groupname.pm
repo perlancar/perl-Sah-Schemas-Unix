@@ -30,7 +30,7 @@ _
         {value=>'andy2', valid=>1},
         {value=>'an dy', valid=>0},
         {value=>'an.dy', valid=>1},
-        {value=>'a' x 33, value=>0, summary=>'Too long'},
+        {value=>'a' x 33, valid=>0, summary=>'Too long'},
     ],
 
 }];
